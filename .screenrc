@@ -1,2 +1,25 @@
 # Disable the startup message
 startup_message off
+altscreen on
+term screen-256color
+ 
+ # for shift right and left arrows
+bindkey ^[[1;2D prev
+bindkey ^[[1;2C next
+ 
+hardstatus on
+hardstatus alwayslastline '%{wk}[ %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
+sorendition kw
+ 
+# hardcopydir:  The directory which contains all hardcopies.
+hardcopydir ~/.screen
+ 
+# shell:  Default process started in screen's windows.
+# Makes it possible to use a different shell inside screen
+# than is set as the default login shell.  Halleluja! :-)
+#  shell                 zsh
+ shell                 bash
+# shell                 ksh
+ 
+# "push right border: current time with seconds and current date"
+#caption always "%=%c:%s %Y-%m-%d"
